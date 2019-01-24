@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" href="TicTacToeStyle.css"/>
+        <title>Greatest Tic Tac Toe</title>
+        
+        <div class ="title" ><h1> Tic Tac Toe</h1></div> 
+    </head>
+    
+    <body>
+       
+       
+            <table class ="box">
+                
+                <tr> 
+                    <th onclick ="xTurn1();">  <img id = "xturn1" src="x.png" alt = "" height = "100" width = "100"/>  <img id = "oturn1" src="" alt = "" height = "100" width = "100"/>  </th>
+                    <th onclick ="xTurn2();">  <img id = "xturn2" src="" alt = "" height = "100" width = "100"/> <img id = "oturn2" src="" alt = "" height = "100" width = "100"/> </th>
+                    <th onclick ="xTurn1();">  <img id = "oturn2" src="" alt = "" height = "100" width = "100"/>  </th>
+                    
+                </tr>    
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                        
+                </tr>
+
+            </table>
+           
+        <script text = "text/javascript">
+             
+     
+     
+      var pChoice = prompt("Hi and Welcome. Shall we start? if so, pick between X or O ");
+
+           window.onload = playerChoice();
+                
+      function playerChoice(){
+        
+
+        if(pChoice == "X" || pChoice == "x"){
+            alert(" Great you will be " + pChoice.toUpperCase() + " Let the games begin " );
+
+        } else if (pChoice == "O" || pChoice == "o"){
+            alert(" Very well then you will be " + pChoice.toUpperCase() + " Lets play shall we? ");
+            
+        }else {
+            alert(" Fine then keep your secrets but, now you should reload page and chose again ");
+        }
+      }           
+      //be able to switch between images depending on the player.......//
+      //be able to now repeatedly switch between images while either X or O.....//
+      //be able to tell the table what player is playing in a specific th.......
+      //try to figure out the array of images.....
+
+      var xOro = [1, 2, 1, 2, 1, 2, 1, 2, 1, 2];
+
+
+      function players(name, image, turns){
+          this.name = name;
+          this.image = image;
+          this.turns = turns;
+      }
+
+      var player1 = new players("Player 1",  ,[1,2,3,4] );
+
+     
+
+      function xTurn1(){
+
+          document.write(player1.name);
+
+
+              if(pChoice == "X" || pChoice == "x"){ 
+              var image = document.getElementById('xturn1');
+               image.src = "x.png"
+
+                }else if(pChoice == "O" || pChoice == "o"){
+                    var image2 = document.getElementById('oturn1');
+                    image2.src = "o.png"
+
+                }
+            }
+
+      
+      function xTurn2(){
+              if(xTurn1() || pChoice == "X" || pChoice == "x"){ 
+                var image2 = document.getElementById('oturn2');
+                    image2.src = "o.png"
+                  
+
+                }else{
+                    var image = document.getElementById('xturn2');
+                    image.src = "x.png"
+                    }
+            }
+
+                    
+        </script>
+
+    </body>
+</html>

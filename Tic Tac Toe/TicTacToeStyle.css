@@ -1,0 +1,42 @@
+
+.title{
+ text-align: center;
+}
+
+
+.box{
+    
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 132, 255);
+    padding: 10px;
+    height: 100%;
+    width: 50%;
+    
+   
+}
+ th{
+
+    height:30%;
+    width:15%;
+    border: 50%;
+    background-color:blanchedalmond;
+    
+
+ }
+ td{
+
+    
+    width:10%;
+    border: 50%;
+    background-color: blanchedalmond;
+    
+
+ }
+
+.th1{
+    height : 300px;
+} 
